@@ -1,0 +1,16 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $backgroundColor;
+  min-width: 250px;
+}
+
+body {
+  // min-height: 100vh;
+  color: $textColor;
+  margin: 0;
+}
