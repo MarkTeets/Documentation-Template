@@ -2,20 +2,16 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
+// Components
+import TopBar from './TopBar';
+import SideBarContainer from './SideBar/SideBarContainer';
+
 // Main component
 const RootLayout = () => {
   return (
     <div className='root-layout'>
-      <header>
-        <nav id='main-nav'>
-          <NavLink to='/' className='nav-link'>
-            Home
-          </NavLink>
-          <NavLink to='/PageTwo' className='nav-link'>
-            Page Two
-          </NavLink>
-        </nav>
-      </header>
+      <TopBar key='TopBar' />
+      <SideBarContainer key='SideBarContainer' />
       <main>
         <Outlet />
       </main>

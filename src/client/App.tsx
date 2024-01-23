@@ -7,6 +7,9 @@ import {
   Route
 } from 'react-router-dom';
 
+// Styles
+import './scss/index.scss';
+
 // Layouts
 import RootLayout from './layouts/RootLayout';
 
@@ -14,12 +17,17 @@ import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import PageTwo from './pages/PageTwo';
 
+// Utilities
+import pageDirectory from './pageDirectory';
+import routesMaker from './utilities/routesMaker';
+
 // React router definition
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path='/PageTwo' element={<PageTwo key='PageTwo' />} />
+      {/* <Route path='/PageTwo' element={<PageTwo key='PageTwo' />} /> */}
+      {...routesMaker(pageDirectory)}
     </Route>
   )
 );
