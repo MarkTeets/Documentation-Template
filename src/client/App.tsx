@@ -15,7 +15,7 @@ import RootLayout from './layouts/RootLayout';
 
 // Pages
 import Home from './pages/Home';
-import PageTwo from './pages/PageTwo';
+// import PageTwo from './pages/PageTwo';
 
 // Utilities
 import pageDirectory from './pageDirectory';

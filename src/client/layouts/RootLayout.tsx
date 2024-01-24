@@ -1,6 +1,6 @@
 // Packages
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 // Components
 import TopBar from './TopBar';
@@ -11,9 +11,11 @@ const RootLayout = () => {
   return (
     <div className='root-layout'>
       <TopBar key='TopBar' />
-      <SideBarContainer key='SideBarContainer' />
-      <main>
-        <Outlet />
+      <main className='main-content'>
+        <SideBarContainer key='SideBarContainer' />
+        <div>
+          <Outlet />
+        </div>
       </main>
     </div>
   );

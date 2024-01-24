@@ -8,6 +8,15 @@ import { PageDirectory } from '../../types/frontendTypes';
 // Utilities
 import pathMaker from './pathMaker';
 
+/**
+ * Given a page directory, which is an array that holds all documentation sections and pages, this
+ * function will return a flat array of routes to each page. This can be used by the react router to
+ * designate paths to each of these pages within the router. The benefit of using this function is
+ * that updates to the page directory will automatically be reflected in the react router.
+ *
+ * @param pageDirectory
+ * @returns array of "Route" elements
+ */
 const routesMaker = (pageDirectory: PageDirectory) => {
   const routes = [];
   for (const section of pageDirectory) {

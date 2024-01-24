@@ -4,9 +4,13 @@ import React from 'react';
 // Main component
 const Home = () => {
   return (
-    <div className='home-page'>
-      <h1>This is my home!!!</h1>
-    </div>
+    <>
+      <h2>Home page</h2>
+      <p>
+        This is where we&apos;ll give an overview of our product. Maybe add some graphics and direct
+        links to helpful pages
+      </p>
+    </>
   );
 };
 

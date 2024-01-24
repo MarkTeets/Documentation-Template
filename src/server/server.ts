@@ -1,18 +1,24 @@
+// Packages
 import express, { NextFunction, Request, Response } from 'express';
-const app = express();
+import path from 'path';
+
+// Routers
 import userRouter from './routes/userRouter';
 
+const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/user', userRouter);
+// Delivers the frontend
+app.use(express.static(path.join(__dirname, '../../dist/')));
 
+// Paths for testing the server
+app.use('/api/user', userRouter);
 app.get('/api', (req: Request, res: Response) => {
   res.send('hello world from express!');
 });
-
 app.get('/', (req: Request, res: Response) => {
   res.status(404).send('Nothing to see here!');
 });
