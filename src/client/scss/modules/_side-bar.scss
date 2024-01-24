@@ -1,0 +1,31 @@
+.side-bar-container{
+  margin: 8px 10px 8px 0px;
+}
+
+.side-bar-button {
+  padding: 2px 4px;
+  margin: 6px 10px;
+  width: 32px;
+  height: 32px;
+
+  img {
+    height: 22px;
+    width: 22px;
+    margin-left: -.5px;
+    margin-top: 1px;
+  }
+}
+
+.side-bar {
+  width: 75px;
+  transition: all 0.75s ease-in-out;
+  overflow: hidden;
+}
+
+.side-bar-section{
+  @include l-flex-column-align-left;
+  max-height: 400px;
+  transition: all 0.75s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+}

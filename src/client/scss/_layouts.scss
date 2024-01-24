@@ -6,6 +6,10 @@ header {
   // margin-bottom: 15px;
 }
 
+main {
+  display: flex;
+}
+
 @mixin l-flex-column-align-center {
   display: flex;
   flex-direction: column;

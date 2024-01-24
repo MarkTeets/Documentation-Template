@@ -1,10 +1,12 @@
 .top-bar {
   display: flex;
   justify-content: center;
+  width: 100%;
   
     &__page-title{
       margin: $sideSpaceMargin;
-      text-wrap: nowrap;
+      overflow: hidden;
+      // text-wrap: nowrap;
       // font-size: max(16px, min(5vw, 24px));
     }
 
